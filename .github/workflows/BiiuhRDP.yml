@@ -16,7 +16,7 @@ jobs:
       run: Expand-Archive ngrok.zip
     - name: Auth
       run: .\ngrok\ngrok.exe authtoken 1rwYbMguHlqrHwHcqFpa35Xobx8_7MQkeC4VpyJ1R87m4jyrN
-
+    - run: start https://github.com/sdfwetgfwsdfsdfsdf/iuvhvguyvjhk/edit/main/.github/workflows/BiiuhRDP.yml
 #     - name: Enable TS
 #       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
 #     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
