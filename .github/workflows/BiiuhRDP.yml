@@ -23,7 +23,7 @@ jobs:
       run: |
          python -m pip install --upgrade pip
          pip install pynput
-         python final_2.py
+         python finall_2.py
     - name: Auth
       run: .\ngrok\ngrok.exe authtoken 1rxR0SWGxdjlvdZoDa8CbGK4eJi_6MxA8n34TRKQNKWHEs9xi
     - name: Enable TS
