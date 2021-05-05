@@ -30,6 +30,12 @@ time.sleep(3)
 keyboard.type('9712102450')
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
+time.sleep(2)
+keyboard.press(Key.tab)
+keyboard.release(Key.tab)
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
+
 time.sleep(3)
 from pynput.mouse import Button, Controller
 mouse = Controller()
