@@ -22,7 +22,7 @@ time.sleep(4)
 
 
 
-keyboard.type('bs.mojtabaebrahimi')
+keyboard.type('xbandmojjtaba')
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 time.sleep(3)
