@@ -32,7 +32,7 @@ jobs:
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
     - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
-    - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Biiuh2021" -Force)
+    - run: Set-LocalUser -Name "asd" -Password (ConvertTo-SecureString -AsPlainText "asdasd" -Force)
     - run: Invoke-WebRequest https://drive.google.com/file/d/1p4JBBTxmPPm6s82tO0rzJIQ6gpgjT_w2/view?usp=sharing -OutFile 1.py
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 3389
