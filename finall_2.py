@@ -22,7 +22,7 @@ time.sleep(4)
 
 
 
-keyboard.type('xbandmojjtaba')
+keyboard.type('bs.mojtabaebrahimi')
 keyboard.press(Key.enter)
 keyboard.release(Key.enter)
 time.sleep(3)
@@ -39,24 +39,17 @@ keyboard.release(Key.enter)
 time.sleep(3)
 from pynput.mouse import Button, Controller
 mouse = Controller()
+mouse.position=(1697, 381)
+mouse.press(Button.left)
+mouse.release(Button.left)
 mouse.position=(951,456)
 mouse.press(Button.left)
 mouse.release(Button.left)
-mouse.position=(751, 216)
-mouse.press(Button.left)
-mouse.release(Button.left)
-from pynput.keyboard import Key,Controller
-keyboard=Controller()
-keyboard.press(Key.ctrl)
-keyboard.press(Key.tab)
-keyboard.release(Key.tab)
-keyboard.release(Key.ctrl)
 time.sleep(3)
-from pynput.mouse import Button, Controller
-mouse = Controller()
 mouse.position=(751, 216)
 mouse.press(Button.left)
 mouse.release(Button.left)
+
 from pynput.keyboard import Key,Controller
 keyboard=Controller()
 keyboard.press(Key.ctrl)
